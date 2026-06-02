@@ -1,1 +1,483 @@
+level 1
+problem 1
+#include <stdio.h>
 
+int main()
+{
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    num = num + 2;
+
+    printf("Result = %d\n", num);
+
+}
+
+problem 2
+
+#include <stdio.h>
+
+int main()
+{
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    num = num - 5;
+
+    printf("Result = %d\n", num);
+
+    return 0;
+}
+problem 3
+
+#include <stdio.h>
+
+int main()
+{
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    num = num * 3;
+
+    printf("Result = %d\n", num);
+
+    return 0;
+}
+problem 4
+
+#include <stdio.h>
+
+int main()
+{
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    num = num / 6;
+
+    printf("Result = %d\n", num);
+
+    return 0;
+}
+problem 5
+
+#include <stdio.h>
+
+int main()
+{
+    int num, remainder;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    remainder = num % 8;
+
+    printf("Remainder = %d\n", remainder);
+
+    return 0;
+}
+problem 6
+
+#include <stdio.h>
+
+int main()
+{
+    int num, onesDigit;
+
+    printf("Enter a two-digit number: ");
+    scanf("%d", &num);
+
+    onesDigit = num % 10;
+
+    printf("One's Digit = %d\n", onesDigit);
+
+    return 0;
+}
+problem 7
+
+#include <stdio.h>
+
+int main()
+{
+    int num, tensDigit;
+
+    printf("Enter a two-digit number: ");
+    scanf("%d", &num);
+
+    tensDigit = num / 10;
+
+    printf("Tens Digit = %d\n", tensDigit);
+
+    return 0;
+}
+problem 8
+
+#include <stdio.h>
+
+int main()
+{
+    int num, onesDigit;
+
+    printf("Enter a three-digit number: ");
+    scanf("%d", &num);
+
+    onesDigit = num % 10;
+
+    printf("One's Digit = %d\n", onesDigit);
+
+    return 0;
+}
+problem 9
+
+#include <stdio.h>
+
+int main()
+{
+    int num, hundredsDigit;
+
+    printf("Enter a three-digit number: ");
+    scanf("%d", &num);
+
+    hundredsDigit = num / 100;
+
+    printf("Hundreds Digit = %d\n", hundredsDigit);
+
+    return 0;
+}
+problem 10
+
+#include <stdio.h>
+
+int main()
+{
+    int num, tensDigit;
+
+    printf("Enter a three-digit number: ");
+    scanf("%d", &num);
+
+    tensDigit = (num / 10) % 10;
+
+    printf("Tens Digit = %d\n", tensDigit);
+
+    return 0;
+}
+problem 12
+
+#include <stdio.h>
+
+int main()
+{
+    int num, sum;
+    
+    printf("Enter a three-digit number: ");
+    scanf("%d", &num);
+
+    sum = (num / 100) + ((num / 10) % 10) + (num % 10);
+
+    printf("Sum of digits = %d\n", sum);
+
+    return 0;
+}
+problem 13
+
+#include <stdio.h>
+
+int main()
+{
+    int num, tens, ones, reverse;
+
+    printf("Enter a two-digit number: ");
+    scanf("%d", &num);
+
+    tens = num / 10;
+    ones = num % 10;
+
+    reverse = (ones * 10) + tens;
+
+    printf("Reversed number = %d\n", reverse);
+
+    return 0;
+}
+problem 14
+
+#include <stdio.h>
+
+int main()
+{
+    int num, hundreds, tens, ones, reverse;
+
+    printf("Enter a three-digit number: ");
+    scanf("%d", &num);
+
+    hundreds = num / 100;
+    tens = (num / 10) % 10;
+    ones = num % 10;
+
+    reverse = (ones * 100) + (tens * 10) + hundreds;
+
+    printf("Reversed number = %d\n", reverse);
+
+    return 0;
+}
+problem 15
+
+#include <stdio.h>
+
+int main()
+{
+    int num;
+    int first, second, lastTwo;
+    int result;
+
+    printf("Enter a 4-digit number: ");
+    scanf("%d", &num);
+
+    first = num / 1000;
+    second = (num / 100) % 10;
+    lastTwo = num % 100;
+
+    result = (second * 1000) + (first * 100) + lastTwo;
+
+    printf("Result = %d\n", result);
+
+    return 0;
+}
+problem 17
+
+#include <stdio.h>
+
+int main()
+{
+    int num, result;
+
+    printf("Enter a two-digit number: ");
+    scanf("%d", &num);
+
+    result = (num / 10) * 10;
+
+    printf("Result = %d\n", result);
+
+    return 0;
+}
+problem 18
+
+#include <stdio.h>
+
+int main()
+{
+    int num, onesDigit, result;
+
+    printf("Enter a two-digit number: ");
+    scanf("%d", &num);
+
+    onesDigit = num % 10;
+    result = 10 + onesDigit;
+
+    printf("Result = %d\n", result);
+
+    return 0;
+}
+
+
+problem 19
+
+#include <stdio.h>
+
+int main()
+{
+    int num, result;
+
+    printf("Enter a three-digit number: ");
+    scanf("%d", &num);
+
+    result = (num / 10) * 10 + 2;
+
+    printf("Result = %d\n", result);
+
+    return 0;
+}
+
+problem 21
+
+#include <stdio.h>
+
+int main()
+{
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    switch(num % 2)
+    {
+        case 1:
+            printf("Result = %d\n", num - 5);
+            break;
+    }
+
+    return 0;
+}
+
+problem 22
+
+#include <stdio.h>
+
+int main()
+{
+    int num, tensDigit;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    tensDigit = (num / 10) % 10;
+
+    switch (tensDigit % 2)
+    {
+        case 1:
+            printf("Number = %d\n", num);
+            break;
+    }
+
+    return 0;
+}
+problem 23
+
+#include <stdio.h>
+
+int main()
+{
+    int num, tens, ones, sum;
+
+    printf("Enter a two-digit number: ");
+    scanf("%d", &num);
+
+    tens = num / 10;
+    ones = num % 10;
+    sum = tens + ones;
+
+    switch (sum % 2)
+    {
+        case 1:
+            printf("Result = %d\n", num - 5);
+            break;
+    }
+
+    return 0;
+}
+problem 24
+
+#include <stdio.h>
+
+int main()
+{
+    int num, hundreds, ones;
+
+    printf("Enter a three-digit number: ");
+    scanf("%d", &num);
+
+    hundreds = num / 100;
+    ones = num % 10;
+
+    switch ((hundreds % 2) && (ones % 2))
+    {
+        case 1:
+            printf("Result = %d\n", num - 5);
+            break;
+    }
+
+    return 0;
+}
+
+problem 25
+
+#include <stdio.h>
+
+int main()
+{
+    int num, sum, result;
+
+    printf("Enter a three-digit number: ");
+    scanf("%d", &num);
+
+    sum = (num / 100) + ((num / 10) % 10) + (num % 10);
+
+    if (sum < 10)
+        result = sum;
+    else
+        result = (sum / 10) + (sum % 10);
+
+    printf("Result = %d\n", result);
+
+    return 0;
+}
+problem 20
+
+#include <stdio.h>
+
+int main()
+{
+    int num, hundreds, ones, result;
+
+    printf("Enter a three-digit number: ");
+    scanf("%d", &num);
+
+    hundreds = num / 100;
+    ones = num % 10;
+
+    result = (hundreds * 100) + ones;
+
+    printf("Result = %d\n", result);
+
+    return 0;
+}
+
+problem 16
+
+#include <stdio.h>
+
+int main()
+{
+    int num, d1, d2, d3, d4, reverse;
+
+    printf("Enter a four-digit number: ");
+    scanf("%d", &num);
+
+    d1 = num / 1000;
+    d2 = (num / 100) % 10;
+    d3 = (num / 10) % 10;
+    d4 = num % 10;
+
+    reverse = d4 * 1000 + d3 * 100 + d2 * 10 + d1;
+
+    printf("Reversed number = %d\n", reverse);
+
+    return 0;
+}
+
+problem 11
+
+#include <stdio.h>
+
+int main()
+{
+    int num, tens, ones, sum;
+
+    printf("Enter a two-digit number: ");
+    scanf("%d", &num);
+
+    tens = num / 10;
+    ones = num % 10;
+
+    sum = tens + ones;
+
+    printf("Sum of digits = %d\n", sum);
+
+    return 0;
+}
