@@ -1,1 +1,275 @@
+level 2
+
+problem 1
+
+#include <stdio.h>
+
+int main() {
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (num == 50)
+        printf("1");
+    else
+        printf("0");
+
+    return 0;
+}
+
+problem 2
+
+#include <stdio.h>
+
+int main() {
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (num != 50)
+        printf("1");
+    else
+        printf("0");
+
+    return 0;
+}
+
+problem 3
+
+#include <stdio.h>
+
+int main() {
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (num < 50)
+        printf("1");
+    else
+        printf("0");
+
+    return 0;
+}
+
+problem 4
+
+#include <stdio.h>
+
+int main() {
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (num > 50)
+        printf("1");
+    else
+        printf("0");
+
+    return 0;
+}
+
+problem 5
+
+#include <stdio.h>
+
+int main() {
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (num <= 50)
+        printf("1");
+    else
+        printf("0");
+
+    return 0;
+}
+
+problem 6
+
+#include <stdio.h>
+
+int main() {
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (num >= 50)
+        printf("1");
+    else
+        printf("0");
+
+    return 0;
+}
+
+problem 7
+
+#include <stdio.h>
+
+int main() {
+    int num, tens, ones;
+
+    scanf("%d", &num);
+
+    tens = num / 10;
+    ones = num % 10;
+
+    if (tens == ones)
+        printf("1");
+    else
+        printf("0");
+
+    return 0;
+}
+
+problem 8
+
+#include <stdio.h>
+
+int main() {
+    int num, tens, ones;
+
+    scanf("%d", &num);
+
+    tens = num / 10;
+    ones = num % 10;
+
+    if (tens != ones)
+        printf("1");
+    else
+        printf("0");
+
+    return 0;
+}
+
+problem 9
+
+#include <stdio.h>
+
+int main() {
+    int num, tens, ones;
+
+    scanf("%d", &num);
+
+    tens = num / 10;
+    ones = num % 10;
+
+    if (tens < ones)
+        printf("1");
+    else
+        printf("0");
+
+    return 0;
+}
+
+problem 10
+
+#include <stdio.h>
+
+int main() {
+    int num, tens, ones;
+
+    scanf("%d", &num);
+
+    tens = num / 10;
+    ones = num % 10;
+
+    if (tens > ones)
+        printf("1");
+    else
+        printf("0");
+
+    return 0;
+}
+
+problem 11
+
+#include <stdio.h>
+
+int main() {
+    int num, tens, ones;
+
+    scanf("%d", &num);
+
+    tens = num / 10;
+    ones = num % 10;
+
+    if (ones <= tens)
+        printf("1");
+    else
+        printf("0");
+
+    return 0;
+}
+
+problem 12
+
+#include <stdio.h>
+
+int main() {
+    int num, tens, ones;
+
+    scanf("%d", &num);
+
+    tens = num / 10;
+    ones = num % 10;
+
+    if (ones >= tens)
+        printf("1");
+    else
+        printf("0");
+
+    return 0;
+}
+
+problem 13
+
+#include <stdio.h>
+
+int main() {
+    int num, tens, ones;
+
+    scanf("%d", &num);
+
+    ones = num % 10;
+    tens = (num / 10) % 10;
+
+    if (ones == tens)
+        printf("1");
+    else
+        printf("0");
+
+    return 0;
+}
+
+
+problem 14
+
+#include <stdio.h>
+
+int main() {
+    int num, firstTwo, lastTwo;
+
+    scanf("%d", &num);
+
+    firstTwo = num / 100;   // First two digits
+    lastTwo = num % 100;    // Last two digits
+
+    if (firstTwo == lastTwo)
+        printf("1");
+    else
+        printf("0");
+
+    return 0;
+}
+
+
+
+
 
