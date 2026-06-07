@@ -1,0 +1,706 @@
+LEVEL 5
+
+PROGRAM 1
+
+#include <stdio.h>
+
+int main() {
+    int i;
+
+    for(i = 1; i <= 5; i++) {
+        printf("%d\n", i);
+    }
+
+    return 0;
+}
+
+PROGRAM 2
+
+#include <stdio.h>
+
+int main() {
+    int i;
+
+    for(i = 5; i >= 1; i--) {
+        printf("%d\n", i);
+    }
+
+    return 0;
+}
+
+PROGRAM 3
+
+#include <stdio.h>
+
+int main() {
+    int i, sum = 0;
+
+    for(i = 1; i <= 5; i++) {
+        sum = sum + i;
+    }
+
+    printf("Sum = %d", sum);
+
+    return 0;
+}
+
+
+PROGRAM 4
+
+#include <stdio.h>
+
+int main() {
+    int i, sum = 0;
+
+    for(i = 6; i >= 1; i--) {
+        sum = sum + i;
+    }
+
+    printf("Sum = %d", sum);
+
+    return 0;
+}
+
+PROGRAM 5
+
+#include <stdio.h>
+
+int main() {
+    int i, sum = 0;
+
+    for(i = 1; i <= 9; i = i + 2) {
+        sum = sum + i;
+    }
+
+    printf("Sum = %d", sum);
+
+    return 0;
+}
+
+
+PROGRAM 6
+
+#include <stdio.h>
+
+int main() {
+    int i;
+
+    for(i = 11; i < 20; i = i + 2) {
+        printf("%d\n", i);
+    }
+
+    return 0;
+}
+
+
+PROGRAM 7
+
+#include <stdio.h>
+
+int main() {
+    int num, tens, ones;
+
+    for(num = 10; num <= 99; num++) {
+        tens = num / 10;
+        ones = num % 10;
+
+        if((tens + ones == 7) && (num % 2 != 0)) {
+            printf("%d\n", num);
+        }
+    }
+
+    return 0;
+}
+
+PROGRAM 8
+
+#include <stdio.h>
+
+int main() {
+    int num, tens, ones;
+
+    for(num = 10; num <= 99; num++) {
+        tens = num / 10;
+        ones = num % 10;
+
+        if((tens + ones == 6) && (num % 2 == 0)) {
+            printf("%d\n", num);
+        }
+    }
+
+    return 0;
+}
+
+PROGRAM 9
+
+#include <stdio.h>
+
+int main() {
+    int num, sum = 0;
+
+    for(num = 10; num <= 99; num++) {
+        if(num % 10 == 5) {
+            sum = sum + num;
+        }
+    }
+
+    printf("Sum = %d", sum);
+
+    return 0;
+}
+
+PROGRAM 10
+
+#include <stdio.h>
+
+int main() {
+    int num, sum = 0;
+
+    for(num = 10; num <= 99; num++) {
+        if((num / 10 == 7) && (num % 2 != 0)) {
+            sum = sum + num;
+        }
+    }
+
+    printf("Sum = %d", sum);
+
+    return 0;
+}
+
+PROGRAM 11
+
+#include <stdio.h>
+
+int main() {
+    int num, count = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    while(num != 0) {
+        count++;
+        num = num / 10;
+    }
+
+    printf("Number of digits = %d", count);
+
+    return 0;
+}
+
+PROGRAM 12
+
+#include <stdio.h>
+
+int main() {
+    int num, digit, sum = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    while(num != 0) {
+        digit = num % 10;
+        sum = sum + digit;
+        num = num / 10;
+    }
+
+    printf("Sum of digits = %d", sum);
+
+    return 0;
+}
+
+
+PROGRAM 13
+
+#include <stdio.h>
+
+int main() {
+    int num, digit, reverse = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    while(num != 0) {
+        digit = num % 10;
+        reverse = reverse * 10 + digit;
+        num = num / 10;
+    }
+
+    printf("Reverse = %d", reverse);
+
+    return 0;
+}
+
+PROGRAM 14
+
+#include <stdio.h>
+
+int main() {
+    int num, temp, first, last, digits = 0;
+    int power = 1, middle, result;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    last = num % 10;
+
+    temp = num;
+    while (temp >= 10) {
+        temp = temp / 10;
+        digits++;
+        power = power * 10;
+    }
+
+    first = temp;
+
+    middle = (num % power) / 10;
+
+    result = last * power + middle * 10 + first;
+
+    printf("Result = %d", result);
+
+    return 0;
+}
+
+
+PROGRAM 15
+
+#include <stdio.h>
+
+int main() {
+    int num, temp, lastDigit, digits = 0;
+    long long result;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    lastDigit = num % 10;
+
+    if (lastDigit % 2 == 0) {
+        temp = num;
+
+        while (temp > 0) {
+            digits++;
+            temp /= 10;
+        }
+
+        long long power = 1;
+        for (int i = 0; i < digits; i++) {
+            power *= 10;
+        }
+
+        result = (long long)num * power + num;
+        printf("Result = %lld", result);
+    }
+    else {
+        temp = num;
+
+        int power = 1;
+        while (temp >= 10) {
+            temp /= 10;
+            power *= 10;
+        }
+
+        result = num - power;
+        printf("Result = %lld", result);
+    }
+
+    return 0;
+}
+
+PROGRAM 16
+
+#include <stdio.h>
+
+int main() {
+    int num, i, flag = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (num <= 1) {
+        flag = 0;
+    } else {
+        for (i = 2; i < num; i++) {
+            if (num % i == 0) {
+                flag = 0;
+                break;
+            }
+        }
+    }
+
+    if (flag == 1)
+        printf("Prime Number");
+    else
+        printf("Not a Prime Number");
+
+    return 0;
+}
+
+PROGRAM 17
+
+#include <stdio.h>
+
+int main() {
+    int num, temp, digit, sum = 0, i, prime = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    /* Find sum of digits */
+    temp = num;
+    while(temp != 0) {
+        digit = temp % 10;
+        sum = sum + digit;
+        temp = temp / 10;
+    }
+
+    /* Check prime */
+    if(num <= 1) {
+        prime = 0;
+    } else {
+        for(i = 2; i < num; i++) {
+            if(num % i == 0) {
+                prime = 0;
+                break;
+            }
+        }
+    }
+
+    if(prime == 1 && sum == 14)
+        printf("Prime and sum of digits is 14");
+    else
+        printf("Condition not satisfied");
+
+    return 0;
+}
+
+PROGRAM 18
+
+#include <stdio.h>
+
+int main() {
+    int num, lastTwo, i, prime = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    lastTwo = num % 100;
+
+    if (lastTwo <= 1) {
+        prime = 0;
+    } else {
+        for (i = 2; i < lastTwo; i++) {
+            if (lastTwo % i == 0) {
+                prime = 0;
+                break;
+            }
+        }
+    }
+
+    if (prime == 1)
+        printf("Prime");
+    else
+        printf("Not Prime");
+
+    return 0;
+}
+
+PROGRAM 19
+
+#include <stdio.h>
+
+int main() {
+    int num, middle, i, prime = 1;
+
+    printf("Enter a 4-digit number: ");
+    scanf("%d", &num);
+
+    middle = (num / 10) % 100;
+
+    if (middle <= 1) {
+        prime = 0;
+    } else {
+        for (i = 2; i < middle; i++) {
+            if (middle % i == 0) {
+                prime = 0;
+                break;
+            }
+        }
+    }
+
+    if (prime == 1)
+        printf("Prime");
+    else
+        printf("Not Prime");
+
+    return 0;
+}
+
+PROGRAM 20
+
+#include <stdio.h>
+
+int main() {
+    int i, j, count = 0, prime;
+
+    for(i = 2; i <= 9; i++) {
+        prime = 1;
+
+        for(j = 2; j < i; j++) {
+            if(i % j == 0) {
+                prime = 0;
+                break;
+            }
+        }
+
+        if(prime == 1) {
+            count++;
+        }
+    }
+
+    printf("Total single-digit prime numbers = %d", count);
+
+    return 0;
+}
+
+PROGRAM 21
+
+#include <stdio.h>
+
+int main()
+{
+    int num, digit, count = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    while(num > 0)
+    {
+        digit = num % 10;
+
+        if(digit % 2 != 0)
+        {
+            count++;
+        }
+
+        num = num / 10;
+    }
+
+    printf("Total number of odd digits = %d", count);
+
+    return 0;
+}
+
+PROGRAM 22
+
+#include <stdio.h>
+
+int main()
+{
+    int num, digit, count = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    while(num > 0)
+    {
+        digit = num % 10;
+
+        if(digit % 2 != 0)
+        {
+            count++;
+        }
+
+        num = num / 10;
+    }
+
+    printf("Total number of odd digits = %d", count);
+
+    return 0;
+}
+
+
+PROGRAM 23
+
+#include <stdio.h>
+
+int main()
+{
+    int num, digit, count = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    while(num > 0)
+    {
+        digit = num % 10;
+
+        if(digit == 1 || digit == 4 || digit == 9)
+        {
+            count++;
+        }
+
+        num = num / 10;
+    }
+
+    printf("Total number of single-digit perfect squares = %d", count);
+
+    return 0;
+}
+
+
+PROGRAM 24
+
+#include <stdio.h>
+
+int main()
+{
+    long long num;
+    int count = 0, twoDigit;
+
+    printf("Enter a number: ");
+    scanf("%lld", &num);
+
+    while(num >= 10)
+    {
+        twoDigit = num % 100;
+
+        if(twoDigit == 16 || twoDigit == 25 || twoDigit == 36 ||
+           twoDigit == 49 || twoDigit == 64 || twoDigit == 81)
+        {
+            count++;
+        }
+
+        num = num / 10;
+    }
+
+    printf("Total number of two-digit perfect squares = %d", count);
+
+    return 0;
+}
+
+
+PROGRAM 25
+
+#include <stdio.h>
+
+int main()
+{
+    int num, digit, count = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    while(num > 0)
+    {
+        digit = num % 10;
+
+        if(digit == 2 || digit == 3 || digit == 5 || digit == 7)
+        {
+            count++;
+        }
+
+        num = num / 10;
+    }
+
+    printf("Total number of single-digit prime numbers = %d", count);
+
+    return 0;
+}
+
+PROGRAM 26
+
+#include <stdio.h>
+
+int main()
+{
+    int num;
+
+    for(num = 9999; num >= 1000; num--)
+    {
+        if(num % 7 == 0)
+        {
+            printf("Biggest 4-digit number divisible by 7 = %d", num);
+            break;
+        }
+    }
+
+    return 0;
+}
+
+PROGRAM 28
+
+#include <stdio.h>
+
+int main()
+{
+    int a, b, max;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    max = (a > b) ? a : b;
+
+    while(1)
+    {
+        if(max % a == 0 && max % b == 0)
+        {
+            printf("LCM = %d", max);
+            break;
+        }
+        max++;
+    }
+
+    return 0;
+}
+
+
+PROGRAM 29
+
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c, max;
+
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &a, &b, &c);
+
+    max = (a > b) ? a : b;
+    max = (max > c) ? max : c;
+
+    while(1)
+    {
+        if(max % a == 0 && max % b == 0 && max % c == 0)
+        {
+            printf("LCM = %d", max);
+            break;
+        }
+        max++;
+    }
+
+    return 0;
+}
+
+PROGRAM 30
+
+#include <stdio.h>
+
+int main()
+{
+    int a, b, temp;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    while(b != 0)
+    {
+        temp = b;
+        b = a % b;
+        a = temp;
+    }
+
+    printf("HCF = %d", a);
+
+    return 0;
+}
